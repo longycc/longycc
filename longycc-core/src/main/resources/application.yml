@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  max-http-header-size:
+logging:
+#  config: classpath:logback-spring.xml
+  file:
+    path: data/logs
+  level:
+    org.springframework.data.mongodb.core: DEBUG
+
+spring:
+#  resources:
+#    static-locations: /static/**
+
+  #  mysql
+  datasource:
+    url: jdbc:mysql://${mysql_url:182.92.160.232}:${mysql_port:3306}/${mysql_database:longycc}?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ${mysql_username:root}
+    password: ${mysql_password:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
